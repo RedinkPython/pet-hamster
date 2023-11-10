@@ -1,3 +1,13 @@
+input.onButtonPressed(Button.A, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . # . .
+        . . . . .
+        . . . # #
+        `)
+    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Birthday), music.PlaybackMode.InBackground)
+})
 input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.Sad)
     soundExpression.sad.playUntilDone()
